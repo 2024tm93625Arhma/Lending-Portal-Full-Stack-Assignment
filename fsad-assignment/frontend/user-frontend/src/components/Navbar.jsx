@@ -26,12 +26,36 @@ const Navbar = () => {
                 color: "white",
             }}
         >
-            <div>
-                <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+            {/* Left side - App Title and Links */}
+            <div style={{ display: "flex", alignItems: "center" }}>
+                <Link to="/" style={{ color: "white", textDecoration: "none", marginRight: "20px" }}>
                     User Portal
                 </Link>
+
+                {/* Equipment links visible only when logged in */}
+                {role && (
+                    <>
+                        <Link
+                            to="/equipment"
+                            style={{ color: "white", textDecoration: "none", marginRight: "15px" }}
+                        >
+                            Equipment
+                        </Link>
+
+                        {/* Admin-only link */}
+                        {role === "ADMIN" && (
+                            <Link
+                                to="/manage-equipment"
+                                style={{ color: "white", textDecoration: "none", marginRight: "15px" }}
+                            >
+                                Manage Equipment
+                            </Link>
+                        )}
+                    </>
+                )}
             </div>
 
+            {/* Right side - Auth buttons */}
             <div>
                 {!role && (
                     <>
@@ -43,6 +67,7 @@ const Navbar = () => {
                         </Link>
                     </>
                 )}
+
                 {role && (
                     <>
                         <span style={{ marginRight: "15px" }}>Role: {role}</span>
@@ -52,7 +77,17 @@ const Navbar = () => {
                         >
                             Profile
                         </Link>
-                        <button onClick={handleLogout} style={{ background: "red", color: "white" }}>
+                        <button
+                            onClick={handleLogout}
+                            style={{
+                                background: "red",
+                                color: "white",
+                                border: "none",
+                                padding: "5px 10px",
+                                cursor: "pointer",
+                                borderRadius: "4px",
+                            }}
+                        >
                             Logout
                         </button>
                     </>

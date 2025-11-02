@@ -9,6 +9,8 @@ import AdminDashboard from "./components/AdminDashboard";
 import StaffDashboard from "./components/StaffDashboard";
 import StudentDashboard from "./components/StudentDashboard";
 import LandingPortal from "./components/LandingPortal"
+import EquipmentList from "./components/EquipmentList";
+import ManageEquipment from "./components/ManageEquipment";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/staff" element={<StaffDashboard />} />
         <Route path="/student" element={<StudentDashboard />} />
+        <Route path="/equipment" element={<EquipmentList />} />
+        <Route path="/manage-equipment" element={<ManageEquipment />} />
       </Routes>
     </BrowserRouter>
   );

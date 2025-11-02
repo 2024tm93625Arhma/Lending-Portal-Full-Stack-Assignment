@@ -1,0 +1,26 @@
+# ===== BACKEND =====
+target/
+*.jar
+*.war
+*.iml
+logs/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# ===== FRONTEND =====
+node_modules/
+build/
+dist/
+out/
+.cache/
+
+# ===== SYSTEM =====
+*.log
+.DS_Store
+Thumbs.db
+
+# ===== MISC =====
+*.class

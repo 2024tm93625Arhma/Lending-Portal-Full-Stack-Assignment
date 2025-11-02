@@ -1,0 +1,7 @@
+- [x] Update package and imports in EquipmentManagementApplication.java
+- [x] Update package and imports in EquipmentController.java
+- [x] Update package and imports in Equipment.java
+- [x] Update package and imports in EquipmentRepository.java
+- [x] Update package and imports in EquipmentRequest.java
+- [x] Update package and imports in EquipmentService.java
+- [x] Verify fixes by running Maven compile
